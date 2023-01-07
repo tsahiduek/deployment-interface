@@ -1,0 +1,10 @@
+apiVersion: deployment.interface.org/v1alpha1
+kind: LBApplication
+metadata:
+  name: mylbapplication
+spec:
+  deploymentName: tsahi-deployment
+  # resourceRef:
+  #   apiVersion: deployment.interface.org/v1alpha1
+  #   kind: xlbapplication
+  #   name: xlbapplication

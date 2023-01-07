@@ -1,0 +1,6 @@
+apiVersion: deployment.interface.org/v1alpha1
+kind: XLBApplication
+metadata:
+  name: myappinterface
+spec:
+  deploymentName: my-deployment

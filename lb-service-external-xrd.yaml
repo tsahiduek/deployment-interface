@@ -1,0 +1,27 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xlbapplications.deployment.interface.org
+spec:
+  group: deployment.interface.org
+  names:
+    kind: XLBApplication
+    listKind: XLBApplicationList
+    plural: xlbapplications
+    singular: xlbapplication
+  claimNames:
+    kind: LBApplication
+    plural: lbapplications
+  versions:
+    - name: v1alpha1
+      served: true
+      referenceable: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                deploymentName:
+                  type: string
